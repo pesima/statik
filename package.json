@@ -8,12 +8,14 @@
     "url": "git://github.com/hariadi/jpa.git"
   },
   "bugs": {
-    "url" : "https://github.com/hariadi/jpa/issues"
+    "url": "https://github.com/hariadi/jpa/issues"
   },
-  "licenses": [{
-    "type": "MIT",
-    "url": "http://opensource.org/licenses/MIT"
-  }],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
   "engines": {
     "node": ">= 0.8.0"
   },
@@ -23,6 +25,6 @@
     "grunt-contrib-jshint": "~0.1.1",
     "grunt-contrib-uglify": "~0.1.1",
     "grunt-contrib-watch": "~0.2.0",
-    "grunt-recess": "~0.3.0"
+    "grunt-recess": "~0.3.1"
   }
 }
