@@ -11,23 +11,34 @@ var fs = require('fs'),
 
 module.exports = function(grunt) {
   grunt.registerTask('version', 'Set the versions in scripts.php for CSS/JS', function() {
-    var scriptsPhp = 'lib/scripts.php';
+    /*
+    var destDir = grunt.config('dir.tmp');
+    var desthtml = path.join(destDir, 'index.html');
+    var destCss = path.join(destDir, 'assets/css/main.min.css');
+    var destJs = path.join(destDir, 'assets/js/scripts.min.js');
+    */
+    var destDir = grunt.config('dir.tmp');
+    var desthtml = 'index.html');
+    var destCss =  'tmp/assets/css/main.min.css';
+    var destJs = 'tmp/assets/js/scripts.min.js';
+    
+    
+    
+    // Hash and rename the CSS
+    var hashCss = md5(destCss);
+    var newCssName = 'assets/css/main-' + hashCss + '.min.css'; 
+    fs.renameSync(destCss, newCssName);
 
-    // Hash the CSS
-    var hashCss = md5('assets/css/main.min.css');
+    // Hash and rename the JS
+    var hashJs = md5(destJs);
+    var newJsName = 'assets/js/scripts-' + hashJs + '.min.js';
+    fs.renameSync(destJs, newJsName);
 
-    // Hash the JS
-    var hashJs = md5('assets/js/scripts.min.js');
-
-    // Update scripts.php to reference the new versions
-    var regexCss = /(wp_enqueue_style\('roots_css',(\s*[^,]+,){2})\s*[^\)]+\);/;
-    var regexJs = /(wp_register_script\('roots_js',(\s*[^,]+,){2})\s*[^,]+,\s*([^\)]+)\);/;
-
-    var content = grunt.file.read(scriptsPhp);
-    content = content.replace(regexCss, "\$1 '" + hashCss + "');");
-    content = content.replace(regexJs, "\$1 '" + hashJs + "', " + "\$3);");
-    grunt.file.write(scriptsPhp, content);
-    grunt.log.writeln('"' + scriptsPhp + '" updated with new CSS/JS versions.');
+    var content = grunt.file.read(destHtml);
+    content = content.replace('href="assets/css/main.css"', 'href="' + newCssName + '"');
+    content = content.replace('src="assets/js/scripts.js"', 'src="' + newJsName + '"');
+    grunt.file.write(destHtml, content);
+    grunt.log.writeln('"' + destHtml + '" updated with new CSS/JS versions.');
   });
 
   /**

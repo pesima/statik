@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+    Mohd Kamaruzaman Zabor -- @wakkrong
+    Hariadi Hinta -- @hariadi
+    <name> -- <role> -- <twitter>
+    
+# THANKS
+
+    Twitter Bootstrap -- @twbootstrap
+    HTML5 Boilerplate -- @h5bp
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Normalize.css, jQuery, HTML5 Boilerplate, Grunt
+
+    Source: https://github.com/hariadi/jpa.gov.my
