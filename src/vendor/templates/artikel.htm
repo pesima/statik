@@ -1,0 +1,33 @@
+<script id="artikel-template" type="text/html">                             
+<!-- 2009-09-04T16:31:24+02:00 -->
+<div class="article">
+  <article role="article">
+    <header>
+    <div class="well well-small pull-left"><time datetime="{{publishedDate.utc}}"><span class="event_month">{{publishedDate.monthShort}}</span> <span class="event_day">{{publishedDate.day}}</span></time></div>
+    <h3 class="article-heading"><a href="{{link}}">{{title}}</a></h3>
+    </header>
+
+    <div class="article-body">
+      <a class="pull-right" href="#"><img class="media-object" data-src="holder.js/64x64"></a>
+      <p>{{contentSnippet}}</p>
+      <footer>
+        <div class="article-shares-stub social-share">
+          <div class="clearfix">
+            <button type="button" class="btn btn-mini btn-inverse shareables" data-text="Public Service Department Of Malaysia" data-toggle="collapse" data-target="#share-penerbitan-{{type}}-{{pageNum}}"><i class="icon-share"></i> <b>2.1k</b></button>
+            <div id="share-penerbitan-{{type}}-{{pageNum}}" class="collapse fade">
+              
+              <a href="https://twitter.com/intent/tweet?text={{title}}&amp;url={{link}}&amp;via=jpagov" class="btn btn-mini twitter"><i class="icon-twitter-sign"></i> <span class="digit">721</span></a>
+              
+              <a href="https://plus.google.com/share?url={{link}}?utm_source=GooglePlus&amp;utm_medium=share%2Bbutton&amp;utm_content={{title}}&amp;utm_campaign=social%2Bmedia" class="btn btn-mini googleplus"><i class="icon-google-plus-sign"></i> <span class="digit">31</span></a>
+              
+              <a href="https://www.facebook.com/sharer/sharer.php?u={{link}}2%2F%26utm_campaign%3Dsocial%252Bmedia" class="btn btn-mini facebook"><i class="icon-facebook-sign"></i> <span class="digit">450</span></a>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </article>
+</div> 
+<hr>
+</script>

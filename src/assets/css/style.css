@@ -60,7 +60,7 @@ body  {
   padding: 20px;
   margin-bottom: 20px;
   background: rgb(255, 255, 255); /* Fall-back for browsers that don't support rgba */
-  background: rgba(255, 255, 255, .7);
+  background: rgba(255, 255, 255, .8);
 }
 
 
@@ -101,8 +101,17 @@ body  {
 #search-form .search-button { display: block; width: 50px; cursor: pointer; float: left; text-align: center; font-size: 0.875em; }
 #search-form .search-input { width: 240px; padding: 0px; border: 0;  }
 #search-form .search-input:focus { outline: none; }
-
-
+.highlight { 
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #FFFF88;
+}
+.frm-search .control-group { margin-top: 10px; }
 
 .navbar-inverse .brand:hover,
 .navbar-inverse .nav > li > a:hover {
@@ -376,7 +385,7 @@ a:hover.menu-gerbang { background-position:-307px -470px; }
 }
 .article-heading, .article-body { margin-left: 60px; }
 /* Faded out hr */
-#terkini hr, .subscribes hr {
+#terkini hr, #tab-pp-content hr, .subscribes hr {
   height: 1px;
   margin: 6px 0;
   background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
@@ -442,12 +451,20 @@ a:hover.menu-gerbang { background-position:-307px -470px; }
 .tab-pekeliling .nav { margin-bottom: 0; }
 .tab-pekeliling .nav-tabs { border: none;}
 .tab-pekeliling .tab-content { 
-    border-color: #DDDDDD #DDDDDD transparent;
+    border-color: #DDDDDD #DDDDDD #DDDDDD;
     border-image: none;
     border-style: solid;
     border-width: 1px; 
     padding: 12px; 
-    background-color: #fff; }
+    background-color: #fff;
+}
+.accordion { margin-top:10px; }
+.accordion-group {
+    border: 1px solid #E5E5E5;
+    background-color: #fff;
+}
+
+#tab-pp-content, #tab-spp-content, #tab-se-content { margin-top: 10px; }
 
 /*
 * Hide only visually, but have it available for screenreaders: h5bp.com/v

@@ -27,7 +27,7 @@ module.exports = function(grunt) {
           compress: true
         },
         files: {
-          '<%= dir.src %>/assets/css/main.min.css': [ '<%= dir.src %>/less/bootstrap.less' ]
+          '<%= dir.dest %>/assets/css/main.min.css': [ '<%= dir.dest %>/assets/js/bootstrap/less/bootstrap.less' ]
         }
       }
     },
@@ -35,21 +35,21 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         files: {
-          '<%= dir.src %>/assets/js/scripts.min.js': [
-            '<%= dir.src %>/vendor/bootstrap/bootstrap-transition.js',
-            '<%= dir.src %>/vendor/bootstrap/bootstrap-alert.js',
-            '<%= dir.src %>/vendor/bootstrap/bootstrap-button.js',
-            '<%= dir.src %>/vendor/bootstrap/bootstrap-carousel.js',
-            '<%= dir.src %>/vendor/bootstrap/bootstrap-collapse.js',
-            '<%= dir.src %>/vendor/bootstrap/bootstrap-dropdown.js',
-            '<%= dir.src %>/vendor/bootstrap/bootstrap-modla.js',
-            '<%= dir.src %>/vendor/bootstrap/bootstrap-tooltip.js',
-            '<%= dir.src %>/vendor/bootstrap/bootstrap-popover.js',
-            '<%= dir.src %>/vendor/bootstrap/bootstrap-scrollspy.js',
-            '<%= dir.src %>/vendor/bootstrap/bootstrap-tab.js',
-            '<%= dir.src %>/vendor/bootstrap/bootstrap-typehead.js',
-            '<%= dir.src %>/assets/js/*.js',
-            '<%= dir.src %>/assets/js/_*.js'
+          '<%= dir.dest %>/assets/js/scripts.min.js': [
+            '<%= dir.dest %>/assets/js/bootstrap/bootstrap-transition.js',
+            '<%= dir.dest %>/assets/js/bootstrap/bootstrap-alert.js',
+            '<%= dir.dest %>/assets/js/bootstrap/bootstrap-button.js',
+            '<%= dir.dest %>/assets/js/bootstrap/bootstrap-carousel.js',
+            '<%= dir.dest %>/assets/js/bootstrap/bootstrap-collapse.js',
+            '<%= dir.dest %>/assets/js/bootstrap/bootstrap-dropdown.js',
+            '<%= dir.dest %>/assets/js/bootstrap/bootstrap-modla.js',
+            '<%= dir.dest %>/assets/js/bootstrap/bootstrap-tooltip.js',
+            '<%= dir.dest %>/assets/js/bootstrap/bootstrap-popover.js',
+            '<%= dir.dest %>/assets/js/bootstrap/bootstrap-scrollspy.js',
+            '<%= dir.dest %>/assets/js/bootstrap/bootstrap-tab.js',
+            '<%= dir.dest %>/assets/js/bootstrap/bootstrap-typehead.js',
+            '<%= dir.dest %>/assets/js/*.js',
+            '<%= dir.dest %>/assets/js/_*.js'
           ]
         }
       }
@@ -57,8 +57,8 @@ module.exports = function(grunt) {
     
     watch: {
       less: {
-        files: [ '<%= dir.src %>/less/*.less' ],
-        tasks: ['recess']
+        files: [ '<%= dir.src %>/assets/js/bootstrap/less/*.less' ],
+        tasks: ['copy', 'recess']
       },
       js: {
         files: [
@@ -85,13 +85,11 @@ module.exports = function(grunt) {
 
   // Register tasks
   grunt.registerTask('default', [
-    'clean:dist',
-    'copy:src:dest',
+    'clean',
+    'copy',
     'recess',
     'uglify',
-    'version',
-    'copy:dest:dest',
-    'clean:dest'
+    'version'
   ]);
   grunt.registerTask('dev', [
     'watch'
