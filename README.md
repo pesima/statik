@@ -1,5 +1,5 @@
 <a href="http://www.pesima.my">
-  <img src="www.gravatar.com/avatar/a9c2466bb077238685e4c581c34c3fa8?s=100" width="100px">
+  <img src="http://pesima.github.com/statik/assets/img/pesima-new-logo.png" width="100px">
 </a>
 
 # [Statik v0.1.0](http://www.pesima.my)
