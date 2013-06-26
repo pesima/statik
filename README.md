@@ -59,7 +59,9 @@ Panduan berikut adalah untuk pengguna Windows 7 64bit, bagi pengguna Linux merek
     ```
 3. Kemudian taip `npm install` - npm akan memuat turun komponen yang diperlukan oleh Statik
 
-## TODO: Dokumentasi
+## Dokumentasi
+- Buat satu folder `src` dan masukkan komponen pada folder tersebut (css/js/html)
+- Taipkan `grunt`
 
 ## Sumbangan & Perkongsian
 
