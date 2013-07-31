@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="site/assets/bootstrap.css">
+  </head>
+  <body>
+    <!-- nav partial -->
+    <div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">ASSEMBLE</a>
+      <ul class="nav">
+        <li class="active">
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="site/markdown.html">Markdown</a>
+        </li>
+        <li>
+          <a href="site/examples.html">Examples</a>
+        </li>
+      </ul>
+      <ul class="nav pull-right">
+        <li> <a href="https://github.com/pesima/pesima-boilerplates">More Examples</a> </li>
+        <li> <a href="https://github.com/pesima/pesima/">Visit Assemble</a> </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container">
+      <!-- body partial, used for adding pages to layout -->
+      
+
+<p><a href="http://www.pesima.my">
+  <img src="http://pesima.github.com/statik/assets/img/pesima-new-logo.png" width="100px">
+</a></p>
+<h1><a href="http://www.pesima.my">Statik v0.2.0</a></h1>
+<p>Statik merupakan projek yang dibangunkan oleh ahli PESIMA bagi memudahkan pengurusan fail statik HTML/CSS/JS/LESS secara lebih efisien, produktif dan mengurangkan tugas manual. </p>
+<h2>Objektif</h2>
+<p>Dibangunkan bertujuan:</p>
+<ul>
+<li>Meningkatkan kecekapan dan prestasi front-end laman web/portal selaras dengan rancangan/dasar Kerajaan berkenaan Sumber Terbuka;</li>
+<li>Memberi pendedahan tentang pembangunan sistem menggunakan Node JS;</li>
+<li>Sebagai salah satu medium di antara PPTM dalam memberi sumbangan kepada sesuatu projek;</li>
+<li>Memberi pendedahan kepada ahli PESIMA memperlajari medium pembangunan projek dalam ICT seperti Git, Nodejs, dan Github.</li>
+</ul>
+<h2>Fungsi</h2>
+<p>Antara kebolehan projek Statik adalah menjalankan tugas secara automatik yang sebelum ini dilakukan secara manual seperti:</p>
+<ul>
+<li>Menguruskan aset statik (HTML/JS/CSS/LESS)</li>
+<li>Memproses fail LESS kepada CSS</li>
+<li>Memastikan kod JS (Javascript) tidak mengandungi ralat</li>
+<li>Menggabung, memproses dan memperkecilkan aset statik bagi mengurangkan jumlah panggilan aset daripada pelayan.</li>
+<li>Menyediakan versi kepada fail CSS dan JS.</li>
+<li>Mengasingkan persekitaran pembangunan dan juga produksi</li>
+<li>AKAN DATANG - Kebolehan memuat turun data melalui RSS dan memproses ke dalam bentuk HTML - TODO</li>
+</ul>
+<h2>Pra-Pemasangan</h2>
+<p>Ringkasan mengenai Statik. Buat amsa ini, Statik tidak dimasukkan dalam NPM. </p>
+<ul>
+<li>Projek dibangun menggunakan <a href="http://nodejs.org/">Node.js</a>.</li>
+<li>Sumber aset diletak dalam direktori <code>src</code>.</li>
+<li>Tugasan Statik bergantung penuh kepada <code>grunt</code> - salah satu rangka kerja penting dalam Node.js.</li>
+<li>Statik mengguna beberapa komponen <code>grunt</code>: <ul>
+<li><code>grunt-contrib-clean</code> - Membersihkan fail dan folder.</li>
+<li><code>grunt-contrib-concat</code> - Menggabungkan fail yang berasingan.</li>
+<li><code>grunt-contrib-jshint</code> - Melakukan siri pemeriksaan kod JS.</li>
+<li><code>grunt-contrib-uglify</code> - Memproses dan memperkecilkan saiz CSS</li>
+<li><code>grunt-contrib-watch</code> - Membolehkan tugasan dijalankan sekiranya berlaku perubahan pada fail.</li>
+<li><code>grunt-recess</code> - Memproses fail LESS dan menukarkan kepada format CSS yang lebih kemas dan mudah diurus.</li>
+</ul>
+</li>
+<li>Konfigurasi utama Statik terletak pada fail <code>Gruntfile.js</code> dan tugasan individu boleh ditemui dalam direktori <code>tasks</code></li>
+<li>Mesin (Windows/Linux) memerlukan beberapa perisian seperti Git, Nodejs</li>
+</ul>
+<h2>TODO: Pemasangan</h2>
+<p>Panduan berikut adalah untuk pengguna Windows 7 64bit, bagi pengguna Linux mereka sudah pakar ;p</p>
+<ol>
+<li>Muat turun dan buat pemasangan <a href="http://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git">Git for Windows</a></li>
+<li>Muat turun dan pemasangan <a href="http://nodejs.org/">Node.js</a> dan npm. Buka tingkap arahan (Window Key + R) dan taipkan <code>cmd</code>. Semak versi Node dan npm bagi memastikan kedua-duanya telah dipasang: <pre><code> C:\Users\adi&gt;node -v &amp;&amp; npm -v</code></pre>
+</li>
+<li>Buka satu tingkap arahan Git Bash dan klon repo ini. Sekiranya protokol git tidak dibenarkan oleh firewall agensi, tukar format kepada https - atau <a href="https://github.com/pesima/statik/zipball/master">muat turun Statik</a><pre><code> $ git clone git://github.com/pesima/statik.git</code></pre>
+</li>
+<li>Kemudian taip <code>npm install</code> - npm akan memuat turun komponen yang diperlukan oleh Statik</li>
+</ol>
+<h2>Dokumentasi</h2>
+<ul>
+<li>Buat satu folder <code>src</code> dan masukkan komponen pada folder tersebut (css/js/html)</li>
+<li>Taipkan <code>grunt</code></li>
+</ul>
+<h2>Sumbangan &amp; Perkongsian</h2>
+<p>Tidak kira ahli PESIMA atau tidak, anda semua dialu-alukan menyumbang kepada projek ini.</p>
+<ul>
+<li>Melaporkan isu (sila rujuk <a href="https://github.com/necolas/issue-guidelines">panduan membuat isu</a>)</li>
+<li>Idea sama ada melibatkan projek ini atau projek baru.</li>
+<li>Menulis dan membuat penambahbaikan kepada dokumentasi</li>
+<li>Menulis atau membuat penstrukturan semula kod projek</li>
+<li>Melakukan penambahbaikan kepada <a href="https://github.com/pesima/statik/issues">isu</a> yang dilapporkan</li>
+</ul>
+
+
+
+
+
+
+
+      <script src="site/assets/highlight.js"></script>
+    </div>
+  </body>
+</html>
