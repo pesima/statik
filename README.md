@@ -2,7 +2,7 @@
   <img src="http://pesima.github.com/statik/assets/img/pesima-new-logo.png" width="100px">
 </a>
 
-# [Statik v0.1.0](http://www.pesima.my)
+# [Statik v0.2.0](http://www.pesima.my)
 
 Statik merupakan projek yang dibangunkan oleh ahli PESIMA bagi memudahkan pengurusan fail statik HTML/CSS/JS/LESS secara lebih efisien, produktif dan mengurangkan tugas manual. 
 
